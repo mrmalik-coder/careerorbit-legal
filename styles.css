@@ -1,0 +1,122 @@
+:root {
+  color-scheme: light;
+  --navy: #10233f;
+  --blue: #2563eb;
+  --teal: #0f9f92;
+  --ink: #243247;
+  --muted: #64748b;
+  --paper: #ffffff;
+  --surface: #f3f7fc;
+  --line: #dce5ef;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 16px/1.7 system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+a { color: var(--blue); }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.site-header {
+  background: var(--navy);
+  color: var(--paper);
+}
+
+.header-inner, main, .site-footer-inner {
+  width: min(100% - 32px, 920px);
+  margin-inline: auto;
+}
+
+.header-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  color: var(--paper);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: .01em;
+  text-decoration: none;
+}
+
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { color: #e5eefc; font-weight: 650; text-decoration: none; }
+nav a[aria-current="page"] { color: #72e0d1; }
+
+main { padding-block: 36px 64px; }
+
+.hero, article {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgb(16 35 63 / 6%);
+}
+
+.hero { padding: clamp(24px, 7vw, 56px); }
+article { padding: clamp(22px, 5vw, 48px); }
+
+h1, h2, h3 { color: var(--navy); line-height: 1.25; }
+h1 { margin: 0 0 12px; font-size: clamp(2rem, 7vw, 3.2rem); }
+h2 { margin-top: 2rem; font-size: 1.35rem; }
+h3 { font-size: 1.05rem; }
+p, li { max-width: 76ch; }
+.lead { color: var(--muted); font-size: 1.12rem; }
+.effective-date, .owner-note {
+  border-left: 4px solid var(--teal);
+  background: #eafaf7;
+  padding: 12px 16px;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.link-card {
+  display: block;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--navy);
+  text-decoration: none;
+  background: #fbfdff;
+}
+
+.link-card:hover { border-color: var(--blue); }
+.link-card strong { display: block; font-size: 1.1rem; }
+.link-card span { color: var(--muted); }
+.muted { color: var(--muted); }
+
+.site-footer {
+  background: var(--navy);
+  color: #dce8f7;
+  padding-block: 22px;
+}
+
+.site-footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+}
+.site-footer a { color: #9de9dd; }
+
+@media (max-width: 520px) {
+  .header-inner { align-items: flex-start; flex-direction: column; padding-block: 14px; }
+  nav { gap: 14px; }
+  main { padding-block: 18px 40px; }
+}

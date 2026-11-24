@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Draft CareerOrbit Privacy Policy.">
+    <title>Privacy Policy | CareerOrbit</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html">CareerOrbit</a>
+        <nav aria-label="Legal navigation">
+          <a href="privacy.html" aria-current="page">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <article>
+        <p class="effective-date"><strong>Publication date:</strong> [TO BE SET BEFORE PUBLICATION]</p>
+        <h1>Privacy Policy</h1>
+        <p>
+          This draft explains the information processed by CareerOrbit's mobile
+          application and related services. It must be reviewed and approved by the
+          CareerOrbit owner and qualified Pakistani legal counsel before publication.
+          Sajid Manzoor is an individual operator, not a company or registered
+          legal entity. This draft must be reviewed before publication.
+        </p>
+        <p>
+          Operator: <strong>Sajid Manzoor (individual)</strong>. Privacy requests:
+          <a href="mailto:sajidmanzoor347@gmail.com">sajidmanzoor347@gmail.com</a>.
+        </p>
+
+        <h2>1. Information we process</h2>
+        <ul>
+          <li>
+            <strong>Account information:</strong> email address, account identifier,
+            display name, authentication-provider information,
+            and email-verification status. The app code includes email/password
+            and Google sign-in flows; which providers are enabled in Firebase
+            Authentication for a release is not verified. Authentication providers
+            may process email addresses, passwords or provider identifiers, IP
+            addresses, and user-agent information as described by Firebase.
+          </li>
+          <li>
+            <strong>Profile and career information:</strong> name, contact details,
+            location, professional summary, skills, education, work history,
+            preferences, certifications, languages, and profile links that a user
+            enters.
+          </li>
+          <li>
+            <strong>CV information:</strong> CV content, templates, settings, and
+            candidate-entered personal, education, experience, skills, and other
+            sections.
+          </li>
+          <li>
+            <strong>Jobs and applications:</strong> employer and company details,
+            job postings, application content and status, and related candidate or
+            employer records.
+          </li>
+          <li>
+            <strong>Saved items and preferences:</strong> saved jobs or companies,
+            notification preferences, and other settings used by the app.
+          </li>
+          <li>
+            <strong>Device notifications:</strong> on supported Android devices,
+            notification permission and a push token, hashed token identifier,
+            device identifier, platform, and app version may be stored in
+            Firestore to deliver notifications.
+          </li>
+          <li>
+            <strong>Support and safety records:</strong> information a user submits
+            in a support request, reports, or other platform interactions.
+          </li>
+        </ul>
+
+        <h2>2. Documents, imports, and OCR</h2>
+        <p>
+          Job posters, shared files, PDFs, and copied LinkedIn profile text can be
+          selected or provided for import. In the current mobile implementation,
+          image text recognition uses on-device ML Kit; PDF pages are rendered on
+          the device and recognized as images. Extracted text is shown for review.
+          The import code does not upload source documents to Firebase Storage.
+        </p>
+        <p>
+          The app and operating system may use temporary local/cache files while
+          processing. A fixed cleanup interval has not been verified. Users should
+          avoid importing information they do not have permission to use.
+        </p>
+
+        <h2>3. How information is used</h2>
+        <p>
+          Information is used to authenticate accounts, maintain profiles and CVs,
+          create and manage job postings, support applications and employer
+          workflows, provide requested notifications, process user-initiated
+          imports, operate support and safety features, and maintain platform
+          security and functionality.
+        </p>
+
+        <h2>4. How information is shared</h2>
+        <ul>
+          <li>
+            Employers can receive information that candidates submit in applications
+            to their jobs. Job listings and employer details may be shown to
+            candidates.
+          </li>
+          <li>
+            A CV is not made public merely by creating it. If a candidate creates an
+            active share link, CareerOrbit publishes a limited projection that
+            includes the professional summary, work experience, education, skills,
+            and certifications. Contact details are excluded from that projection.
+            The owner can revoke a share link.
+          </li>
+          <li>
+            Google and Firebase provide authentication, database, and notification
+            services. Google processes information when a user chooses Google
+            sign-in. Android push notifications use Firebase Cloud Messaging
+            where available and permitted by the user's device settings.
+          </li>
+          <li>
+            External application methods, including WhatsApp or external employer
+            sites, are controlled by the user and their respective providers.
+            Opening an external destination does not itself submit a CareerOrbit
+            application.
+          </li>
+        </ul>
+
+        <h2>5. Storage and security</h2>
+        <p>
+          CareerOrbit uses Firebase Authentication and Firestore in its current
+          implementation. The inspected Firebase Staging project has a default
+          Cloud Firestore Native database, Standard edition, in
+          <strong>asia-south1 (Mumbai, India)</strong>. This is a Staging fact, not
+          confirmation of the location used by any release or Production
+          environment. Firestore rules restrict access to account-owned data and
+          use explicit access rules for public CV-share projections.
+        </p>
+        <p>
+          Firebase Authentication processes data in US data centers, as described
+          in Google's Firebase privacy information. Google and Firebase may also
+          process information internationally to provide their services. The
+          Firebase project ID does not establish a location for every product.
+          No Firebase Storage bucket or bucket location was verified. The reviewed
+          mobile import code processes selected images and PDFs on-device and
+          contains no upload of those source documents to Firebase Storage. No
+          analytics, advertising, or crash-reporting SDK was found in the reviewed
+          mobile dependency manifest.
+        </p>
+        <p>
+          No internet service can promise absolute security. This policy does not
+          make a broader encryption or security guarantee than the implementation
+          supports.
+        </p>
+
+        <h2>6. Retention and deletion</h2>
+        <p>
+          CareerOrbit retains information only as long as reasonably needed for
+          the purposes described here, service operation, security, dispute
+          handling, and applicable legal obligations. The detailed schedule,
+          including backup cleanup and records that may need retention or
+          anonymization, has not been confirmed. Users can delete individual CVs
+          and revoke CV share links through supported app functions. Revoking a
+          link prevents future access through that link but cannot recall copies
+          already viewed or saved by others. A server-side account-deletion
+          workflow exists in source, but deployment and end-to-end operation are
+          not verified; it is not an available or verified in-app self-service
+          capability. Related
+          application, audit, wallet, and business records may require retention or
+          anonymization decisions; those rules are pending owner and legal review.
+        </p>
+        <p>
+          To request access, correction, or deletion, email
+          <a href="mailto:sajidmanzoor347@gmail.com">sajidmanzoor347@gmail.com</a>.
+          A request is not a promise of immediate or complete deletion; identity
+          verification and applicable retention requirements may apply.
+        </p>
+
+        <h2>7. Children and eligibility</h2>
+        <p>
+          CareerOrbit is intended for people who are at least 16 years old. People
+          under 16 must not create or use an account. The age threshold and
+          children's privacy approach require review by qualified Pakistani legal
+          counsel before publication.
+        </p>
+
+        <h2>8. International processing and legal basis</h2>
+        <p>
+          Firebase, Google, and notification infrastructure may process
+          information outside Pakistan. Apart from the Staging Firestore location
+          stated above, locations for other resources and any release environment
+          have not been verified. The appropriate legal basis, required disclosures,
+          and any cross-border transfer requirements must be assessed by qualified
+          Pakistani legal counsel before publication.
+        </p>
+
+        <h2>9. Changes and contact</h2>
+        <p>
+          This policy may be updated when the service or its data practices change.
+          The effective date above must be approved and updated for each published
+          version. Privacy contact:
+          <a href="mailto:sajidmanzoor347@gmail.com">sajidmanzoor347@gmail.com</a>.
+        </p>
+        <p>See also <a href="terms.html">CareerOrbit Terms &amp; Conditions</a>.</p>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <a href="index.html">CareerOrbit Legal</a>
+        <a href="mailto:sajidmanzoor347@gmail.com">Privacy contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
